@@ -1,0 +1,15 @@
+#include<bits/stdc++.h>
+
+int solution(vector<int> &nums) {
+    // Implement your solution here
+    unordered_map<int,int>mp;
+    for(int i=0;i<nums.size();i++)
+    {
+        mp[nums[i]]++;
+    }
+    for(auto it:mp)
+    {
+        if(it.second%2==1) return it.first;
+    }
+    return -1;
+}
