@@ -1,12 +1,7 @@
-#include <algorithm>
+#include <math.h>
+
 int solution(int X, int Y, int D) {
-    // Implement your solution here
-    int dis=X;
-    int c=0;
-    while(dis<Y)
-    {
-        dis+=D;
-        c++;
-    }
-    return c;
+   
+    double numJumps = (( (double)Y)-( (double) X) )/ ((double)D);
+    return ( ceil(numJumps) );
 }
